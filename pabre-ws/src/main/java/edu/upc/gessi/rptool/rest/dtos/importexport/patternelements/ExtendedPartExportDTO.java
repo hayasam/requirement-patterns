@@ -35,8 +35,9 @@ public class ExtendedPartExportDTO extends PatternItemExportDTO implements Compa
 
     @Override
     public int compareTo(ExtendedPartExportDTO o) {
-	if (o == null)
-	    throw new NullPointerException("Comparison between null objects is not allowed");
+	if (o == null) {
+        throw new NullPointerException("Comparison between null objects is not allowed");
+    }
 
 	try {
 	    return this.pos - o.getPos();

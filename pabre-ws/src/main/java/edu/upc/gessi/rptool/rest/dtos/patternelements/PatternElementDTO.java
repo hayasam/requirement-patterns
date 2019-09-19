@@ -30,13 +30,6 @@ public abstract class PatternElementDTO extends ReducedPatternObjectDTO {
 	}
     }
 
-    public PatternElementDTO(PatternElement s, Set<SourceDTO> sources) {
-	super(s.getId());
-	this.description = s.getDescription();
-	this.comments = s.getComments();
-	this.sources = sources;
-    }
-
     public PatternElementDTO(long id, String description, String comments, Set<SourceDTO> sources) {
 
 	super(id);

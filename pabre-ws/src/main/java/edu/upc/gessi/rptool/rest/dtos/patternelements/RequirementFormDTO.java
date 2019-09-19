@@ -57,108 +57,60 @@ public class RequirementFormDTO extends PatternElementDTO implements Comparable<
 	this.pos = rf.getPos();
     }
 
-    public String getName() {
-	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
-    }
-
     public Short getPos() {
 	return pos;
     }
 
-    public void setPos(Short pos) {
-	this.pos = pos;
-    }
-
-    public URI getUri() {
-	return uri;
-    }
-
-    public void setUri(URI uri) {
-	this.uri = uri;
+    public String getName() {
+        return name;
     }
 
     public long getRequirementPatternId() {
 	return requirementPatternId;
     }
 
+    public URI getUri() {
+        return uri;
+    }
+
     public void setRequirementPatternId(long requirementPatternId) {
 	this.requirementPatternId = requirementPatternId;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     public long getVersionId() {
 	return versionId;
     }
 
-    public void setVersionId(long versionId) {
-	this.versionId = versionId;
-    }
-
-    public String getAuthor() {
-	return author;
-    }
-
-    public void setAuthor(String author) {
-	this.author = author;
+    public Integer getNumInstances() {
+        return numInstances;
     }
 
     public Date getModificationDate() {
 	return modificationDate;
     }
 
-    public void setModificationDate(Date modificationDate) {
-	this.modificationDate = modificationDate;
-    }
-
-    public Integer getNumInstances() {
-	return numInstances;
-    }
-
-    public void setNumInstances(Integer numInstances) {
-	this.numInstances = numInstances;
-    }
-
     public Boolean getAvailable() {
 	return available;
-    }
-
-    public void setAvailable(Boolean available) {
-	this.available = available;
     }
 
     public Integer getStatsNumInstances() {
 	return statsNumInstances;
     }
 
-    public void setStatsNumInstances(Integer statsNumInstances) {
-	this.statsNumInstances = statsNumInstances;
-    }
-
-    public Integer getStatsNumAssociates() {
-	return statsNumAssociates;
-    }
-
-    public void setStatsNumAssociates(Integer statsNumAssociates) {
-	this.statsNumAssociates = statsNumAssociates;
-    }
-
     public FixedPartDTO getFixedPart() {
 	return fixedPart;
     }
 
-    public void setFixedPart(FixedPartDTO fixedPart) {
-	this.fixedPart = fixedPart;
+    public Integer getStatsNumAssociates() {
+        return statsNumAssociates;
     }
 
     public Set<ExtendedPartDTO> getExtendedParts() {
 	return extendedParts;
-    }
-
-    public void setExtendedParts(Set<ExtendedPartDTO> extendedParts) {
-	this.extendedParts = extendedParts;
     }
 
     @Override

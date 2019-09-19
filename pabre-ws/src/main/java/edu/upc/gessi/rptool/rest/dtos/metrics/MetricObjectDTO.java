@@ -30,21 +30,6 @@ public abstract class MetricObjectDTO {
 	}
     }
 
-    public MetricObjectDTO(MetricObject s, Set<SourceDTO> sources) {
-	this.id = s.getId();
-	this.description = s.getDescription();
-	this.comments = s.getComments();
-	this.sources = sources;
-    }
-
-    public MetricObjectDTO(long id, String description, String comments, Set<SourceDTO> sources) {
-	super();
-	this.id = id;
-	this.description = description;
-	this.comments = comments;
-	this.sources = sources;
-    }
-
     public long getId() {
 	return id;
     }

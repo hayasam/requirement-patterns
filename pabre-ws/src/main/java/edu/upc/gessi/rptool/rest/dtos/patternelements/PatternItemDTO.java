@@ -56,16 +56,8 @@ public class PatternItemDTO extends ReducedPatternObjectDTO {
 	return artifactsRelation;
     }
 
-    public void setArtifactsRelation(String artifactsRelation) {
-	this.artifactsRelation = artifactsRelation;
-    }
-
     public URI getUri() {
 	return uri;
-    }
-
-    public void setUri(URI uri) {
-	this.uri = uri;
     }
 
     @Override
@@ -82,72 +74,36 @@ public class PatternItemDTO extends ReducedPatternObjectDTO {
 	return requirementPatternId;
     }
 
-    public void setRequirementPatternId(long requirementPatternId) {
-	this.requirementPatternId = requirementPatternId;
-    }
-
     public long getVersionId() {
 	return versionId;
-    }
-
-    public void setVersionId(long versionId) {
-	this.versionId = versionId;
     }
 
     public long getFormId() {
 	return formId;
     }
 
-    public void setFormId(long formId) {
-	this.formId = formId;
-    }
-
     public String getFormText() {
 	return formText;
-    }
-
-    public void setFormText(String patternText) {
-	this.formText = patternText;
     }
 
     public String getQuestionText() {
 	return questionText;
     }
 
-    public void setQuestionText(String questionText) {
-	this.questionText = questionText;
-    }
-
     public Integer getNumInstances() {
 	return numInstances;
-    }
-
-    public void setNumInstances(Integer numInstances) {
-	this.numInstances = numInstances;
     }
 
     public Boolean getAvailable() {
 	return available;
     }
 
-    public void setAvailable(Boolean available) {
-	this.available = available;
-    }
-
     public Integer getStatsNumInstances() {
 	return statsNumInstances;
     }
 
-    public void setStatsNumInstances(Integer statsNumInstances) {
-	this.statsNumInstances = statsNumInstances;
-    }
-
     public Set<ParameterDTO> getParameters() {
 	return parameters;
-    }
-
-    public void setParameters(Set<ParameterDTO> parameters) {
-	this.parameters = parameters;
     }
 
 }

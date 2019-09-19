@@ -28,13 +28,6 @@ public abstract class ClassificationObjectDTO {
 	}
     }
 
-    public ClassificationObjectDTO(ClassificationObject s, Set<SourceDTO> sources) {
-	this.id = s.getId();
-	this.description = s.getDescription();
-	this.comments = s.getComments();
-	this.sources = sources;
-    }
-
     public ClassificationObjectDTO(long id, String description, String comments, Set<SourceDTO> sources) {
 	super();
 	this.id = id;
@@ -47,31 +40,15 @@ public abstract class ClassificationObjectDTO {
 	return id;
     }
 
-    public void setId(long id) {
-	this.id = id;
+    public String getComments() {
+        return comments;
     }
 
     public String getDescription() {
 	return description;
     }
 
-    public void setDescription(String description) {
-	this.description = description;
-    }
-
-    public String getComments() {
-	return comments;
-    }
-
-    public void setComments(String comments) {
-	this.comments = comments;
-    }
-
     public Set<SourceDTO> getSources() {
 	return sources;
-    }
-
-    public void setSources(Set<SourceDTO> sources) {
-	this.sources = sources;
     }
 }

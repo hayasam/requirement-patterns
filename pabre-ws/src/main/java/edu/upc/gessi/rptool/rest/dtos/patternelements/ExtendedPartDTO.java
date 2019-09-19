@@ -14,20 +14,12 @@ public class ExtendedPartDTO extends PatternItemDTO implements Comparable<Extend
     public ExtendedPartDTO(ExtendedPart ep, Long requirementPatternId, Long versionId, Long formId,
 	    String artifactsRelation) {
 	super(ep, requirementPatternId, versionId, formId, artifactsRelation);
-	this.name = ep.getName();
-	this.pos = ep.getPos();
+        this.pos = ep.getPos();
+	    this.name = ep.getName();
     }
 
     public String getName() {
 	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
-    }
-
-    public void setPos(Short pos) {
-	this.pos = pos;
     }
 
     public Short getPos() {
@@ -36,9 +28,7 @@ public class ExtendedPartDTO extends PatternItemDTO implements Comparable<Extend
 
     @Override
     public int compareTo(ExtendedPartDTO o) {
-	if (o == null)
-	    throw new NullPointerException("Comparison between null objects is not allowed");
-
+	if (o == null) throw new NullPointerException("Comparison between null objects is not allowed");
 	try {
 	    return this.pos - o.getPos();
 	} catch (NullPointerException e) {
