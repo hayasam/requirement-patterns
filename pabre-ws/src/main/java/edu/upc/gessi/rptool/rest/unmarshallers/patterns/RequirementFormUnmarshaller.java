@@ -250,24 +250,12 @@ public class RequirementFormUnmarshaller {
 	return pos;
     }
 
-    public String getName() {
-	return name;
-    }
-
     public void setName(String name) {
 	this.name = name;
     }
 
-    public String getDescription() {
-	return description;
-    }
-
     public void setDescription(String description) {
 	this.description = description;
-    }
-
-    public String getComments() {
-	return comments;
     }
 
     public void setComments(String comments) {
@@ -278,6 +266,10 @@ public class RequirementFormUnmarshaller {
 	return sources;
     }
 
+	public String getName() {
+		return name;
+	}
+
     public void setSources(Set<Long> sources) {
 	this.sources = sources;
     }
@@ -286,6 +278,10 @@ public class RequirementFormUnmarshaller {
 	return author;
     }
 
+	public String getDescription() {
+		return description;
+	}
+
     public void setAuthor(String author) {
 	this.author = author;
     }
@@ -293,6 +289,10 @@ public class RequirementFormUnmarshaller {
     public Date getModificationDate() {
 	return modificationDate;
     }
+
+	public String getComments() {
+		return comments;
+	}
 
     public void setModificationDate(Date modificationDate) {
 	this.modificationDate = modificationDate;

@@ -138,8 +138,8 @@ public class Parameter extends PatternObject implements Comparable<Parameter> {
 	int result = super.hashCode();
 	result = prime * result + ((correctnessCondition == null) ? 0 : correctnessCondition.hashCode());
 	result = prime * result + ((description == null) ? 0 : description.hashCode());
-	result = prime * result + ((metric == null) ? 0 : metric.hashCode());
 	result = prime * result + ((name == null) ? 0 : name.hashCode());
+	result = prime * result + ((metric == null) ? 0 : metric.hashCode());
 	return result;
     }
 

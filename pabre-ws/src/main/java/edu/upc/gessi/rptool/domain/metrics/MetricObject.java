@@ -26,21 +26,21 @@ public abstract class MetricObject implements Identificable {
      * ATTRIBUTES
      */
 
+    @ManyToMany
+    @JoinTable(name = "SOURCES_AND_METRIC_OBJECT", joinColumns = {
+            @JoinColumn(name = "METRIC_ID") }, inverseJoinColumns = { @JoinColumn(name = "SOURCE_ID") })
+    private Set<Source> sources;
+
     @Id
     @Column(name = "ID")
     @GeneratedValue(generator = "customGenerator")
     private long id;
 
-    @Column(name = "DESCRIPTION", nullable = false, length = 2000)
-    private String description;
-
     @Column(name = "COMMENTS", nullable = false, length = 2000)
     private String comments;
 
-    @ManyToMany
-    @JoinTable(name = "SOURCES_AND_METRIC_OBJECT", joinColumns = {
-	    @JoinColumn(name = "METRIC_ID") }, inverseJoinColumns = { @JoinColumn(name = "SOURCE_ID") })
-    private Set<Source> sources;
+    @Column(name = "DESCRIPTION", nullable = false, length = 2000)
+    private String description;
 
     /*
      * CREATORS
@@ -61,36 +61,36 @@ public abstract class MetricObject implements Identificable {
      * GET'S AND SET'S METHODS
      */
 
+    public void setId(long l) {
+        id = l;
+    }
+
     public long getId() {
 	return id;
     }
 
-    public void setId(long l) {
-	id = l;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getDescription() {
 	return description;
     }
 
-    public void setDescription(String description) {
-	this.description = description;
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
     public String getComments() {
 	return comments;
     }
 
-    public void setComments(String comments) {
-	this.comments = comments;
+    public void setSources(Set<Source> s) {
+        sources = s;
     }
 
     public Set<Source> getSources() {
 	return sources;
-    }
-
-    public void setSources(Set<Source> s) {
-	sources = s;
     }
 
     /*

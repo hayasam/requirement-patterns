@@ -269,19 +269,14 @@ public class RequirementPattern extends PatternElement implements Comparable<Req
 
     @Override
     public boolean equals(Object obj) {
-	if (this == obj)
-	    return true;
-	if (!super.equals(obj))
-	    return false;
-	if (getClass() != obj.getClass())
-	    return false;
+	if (!super.equals(obj)) return false;
+	if (this == obj) return true;
+	if (getClass() != obj.getClass()) return false;
 	RequirementPattern other = (RequirementPattern) obj;
 	if (name == null) {
-	    if (other.name != null) return false;
-	} else if (!name.equals(other.name))
-	    return false;
-	return true;
-    }
+		return other.name == null;
+	} else return name.equals(other.name);
+	}
 
     @Override
     public int compareTo(RequirementPattern o) {

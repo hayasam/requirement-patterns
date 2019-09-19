@@ -90,52 +90,24 @@ public class GenericMetricExportDTO {
 	return name;
     }
 
-    public void setName(String name) {
-	this.name = name;
-    }
-
     public String getDescription() {
 	return description;
-    }
-
-    public void setDescription(String description) {
-	this.description = description;
     }
 
     public String getComments() {
 	return comments;
     }
 
-    public void setComments(String comments) {
-	this.comments = comments;
-    }
-
     public List<String> getSources() {
 	return sources;
-    }
-
-    public void setSources(List<String> sources) {
-	this.sources = sources;
     }
 
     public Long getIdSimple() {
 	return idSimple;
     }
 
-    public void setIdSimple(Long idSimple) {
-	this.idSimple = idSimple;
-    }
-
-    public void setType(Type type) {
-	this.type = type;
-    }
-
     public String getDateInString() {
 	return dateInString;
-    }
-
-    public void setDateInString(String dateInString) {
-	this.dateInString = dateInString;
     }
 
 }

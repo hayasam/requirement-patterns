@@ -76,19 +76,15 @@ public class CostFunction extends ExternalObject {
     public int hashCode() {
 	final int prime = 31;
 	int result = super.hashCode();
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
 	result = prime * result + ((function == null) ? 0 : function.hashCode());
-	result = prime * result + ((name == null) ? 0 : name.hashCode());
 	return result;
     }
 
     @Override
     public boolean equals(Object obj) {
-	if (this == obj)
-	    return true;
-	if (!super.equals(obj))
-	    return false;
-	if (getClass() != obj.getClass())
-	    return false;
+	if (this == obj) return true;
+	if (!super.equals(obj) || (getClass() != obj.getClass())) return false;
 	CostFunction other = (CostFunction) obj;
 	if (function == null) {
 	    if (other.function != null) return false;

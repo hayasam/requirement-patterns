@@ -165,12 +165,8 @@ public class ClassificationSchema extends ClassificationObject {
 
     @Override
     public boolean equals(Object obj) {
-	if (this == obj)
-	    return true;
-	if (!super.equals(obj))
-	    return false;
-	if (getClass() != obj.getClass())
-	    return false;
+	if (!super.equals(obj) || (getClass() != obj.getClass())) return false;
+		if (this == obj) return true;
 	ClassificationSchema other = (ClassificationSchema) obj;
 	if (name == null) {
 	    if (other.name != null) return false;
