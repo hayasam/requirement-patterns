@@ -26,8 +26,8 @@ public class RequirementPatternImportUnmarshaller extends RequirementPatternUnma
 	    @JsonProperty(value = "description", required = true) String description,
 	    @JsonProperty(value = "comments", required = true) String comments,
 	    @JsonProperty(value = "sourcesByIdentifier", required = false) Set<String> sources,
-	    @JsonProperty(value = "versions", required = true) ArrayList<RequirementPatternVersionImportUnmarshaller> versions,
-	    @JsonProperty(value = "editable", required = true) boolean editable) throws IOException {
+	    @JsonProperty(value = "versions", required = true) List<RequirementPatternVersionImportUnmarshaller> versions,
+	    @JsonProperty(value = "editable", required = true) boolean editable) {
 
 	super(id, name, comments, description, editable);
 	this.versionsAux = versions;

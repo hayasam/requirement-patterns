@@ -3,8 +3,10 @@ package edu.upc.gessi.rptool.rest.unmarshallers.patterns.updaters;
 import edu.upc.gessi.rptool.data.GenericDataController;
 import edu.upc.gessi.rptool.domain.patternelements.RequirementForm;
 import edu.upc.gessi.rptool.exceptions.IntegrityException;
+import edu.upc.gessi.rptool.exceptions.ValueException;
 import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
 import edu.upc.gessi.rptool.rest.unmarshallers.patterns.RequirementFormPutUnmarshaller;
+import org.apache.uima.UIMAException;
 
 public class RequirementFormUpdater {
     private RequirementForm f;
@@ -20,7 +22,7 @@ public class RequirementFormUpdater {
 	this.unmarshaller = unmarshaller;
     }
 
-    public void update() throws Exception {
+    public void update() throws IntegrityException, SemanticallyIncorrectException {
 	build();
 	updateFields();
 	save();

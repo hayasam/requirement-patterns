@@ -10,8 +10,7 @@ public class PutPatternObjectDependencyUnmarshaller extends PatternObjectDepende
     @JsonCreator
     public PutPatternObjectDependencyUnmarshaller(
 	    @JsonProperty(value = "dependencyType", required = true) String dependencyType,
-	    @JsonProperty(value = "dependencyDirection", required = true) String dependencyDirection)
-	    throws SemanticallyIncorrectException {
+	    @JsonProperty(value = "dependencyDirection", required = true) String dependencyDirection) {
 	super(dependencyType, dependencyDirection, 0);
     }
 

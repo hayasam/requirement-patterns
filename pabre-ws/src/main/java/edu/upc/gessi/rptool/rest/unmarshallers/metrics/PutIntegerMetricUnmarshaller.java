@@ -25,14 +25,14 @@ public class PutIntegerMetricUnmarshaller extends IntegerMetricUnmarshaller {
     }
 
     @Override
-    protected void setMinMaxDefaultValues() throws ValueException {
+    protected void setMinMaxDefaultValues() {
 	((IntegerMetric) metric).setMinNoCheck(minValue);
 	((IntegerMetric) metric).setMaxNoCheck(maxValue);
 	((IntegerMetric) metric).setDefaultValueNoCheck(defaultValue);
     }
 
     @Override
-    protected void setMetricName() throws IntegrityException {
+    protected void setMetricName() {
 	metric.setName(name);
     }
 

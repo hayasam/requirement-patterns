@@ -15,6 +15,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import edu.upc.gessi.rptool.exceptions.IntegrityException;
+import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
 import org.apache.log4j.Logger;
 
 import edu.upc.gessi.rptool.data.PatternDataController;
@@ -30,6 +32,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.apache.uima.UIMAException;
 
 @Path("/patterns/{patternId}/versions")
 @Api(value = "Pattern versions", produces = MediaType.APPLICATION_JSON)
@@ -98,7 +101,7 @@ public class PatternsVersions {
     public Response updatePatternVersions(
 	    @ApiParam(value = "unmarshaller with new version to add", required = true) RequirementPatternVersionsUnmarshaller unmarshaller,
 	    @ApiParam(value = "ID of the pattern", required = true) @PathParam("patternId") long patternId)
-	    throws Exception {
+	    throws SemanticallyIncorrectException, IntegrityException, UIMAException {
 	logger.debug("Updating all the versions");
 	RequirementPattern rp = Patterns.retrieveRequirementPattern(patternId); // get the pattern
 	Set<RequirementPatternVersion> versions = unmarshaller.build();

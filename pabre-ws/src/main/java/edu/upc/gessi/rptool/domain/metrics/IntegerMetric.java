@@ -112,7 +112,7 @@ public class IntegerMetric extends SimpleMetric {
 
     }
 
-    private final String defaultValueErrorMessage = "If default value is defined, minimum must be smaller than default value and default value must be smaller than maximum. Otherwise, minimum must be smaller than maximum.";
+    private static final String defaultValueErrorMessage = "If default value is defined, minimum must be smaller than default value and default value must be smaller than maximum. Otherwise, minimum must be smaller than maximum.";
 
     /*
      * GET'S AND SET'S METHODS

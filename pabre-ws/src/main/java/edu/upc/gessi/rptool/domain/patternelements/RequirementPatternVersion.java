@@ -475,8 +475,7 @@ public class RequirementPatternVersion extends PatternObject implements Serializ
 	} else if (!statsNumAssociates.equals(other.statsNumAssociates))
 	    return false;
 	if (statsNumInstances == null) {
-	    if (other.statsNumInstances != null)
-		return false;
+	    if (other.statsNumInstances != null) return false;
 	} else if (!statsNumInstances.equals(other.statsNumInstances))
 	    return false;
 	if (versionDate == null) {
@@ -489,5 +488,25 @@ public class RequirementPatternVersion extends PatternObject implements Serializ
 	    return false;
 	return true;
     }
+
+	@Override
+	public int hashCode() {
+		int result = 17;
+		result = 31 * result + artifactRelation.hashCode();
+		result = 31 * result + author.hashCode();
+		result = 31 * result + available.hashCode();
+		result = 31 * result + externalObjects.hashCode();
+		result = 31 * result + forms.hashCode();
+		result = 31 * result + goal.hashCode();
+		result = 31 * result + keywords.hashCode();
+		result = 31 * result + requirementPattern.hashCode();
+		result = 31 * result + numInstances.hashCode();
+		result = 31 * result + reason.hashCode();
+		result = 31 * result + statsNumAssociates.hashCode();
+		result = 31 * result + statsNumInstances.hashCode();
+		result = 31 * result + versionDate.hashCode();
+		result = 31 * result + versionDependencies.hashCode();
+		return result;
+	}
 
 }

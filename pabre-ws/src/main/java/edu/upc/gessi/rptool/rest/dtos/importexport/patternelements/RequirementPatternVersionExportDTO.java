@@ -55,7 +55,6 @@ public class RequirementPatternVersionExportDTO implements Comparable<Requiremen
 	    this.costFunctions.add(new CostFunctionExportDTO(costFunction));
 	}
 
-	RequirementPattern rp = rpv.getRequirementPattern();
 	this.forms = new TreeSet<>();
 	for (RequirementForm rf : rpv.getForms()) {
 	    this.forms.add(new RequirementFormExportDTO(rf));

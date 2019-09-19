@@ -504,4 +504,13 @@ public class Classifier extends ClassificationObject {
         return type == other.type;
     }
 
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + name.hashCode();
+        result = 31 * result + parentClassifier.hashCode();
+        result = 31 * result + Integer.valueOf(type).hashCode();
+        return result;
+    }
+
 }

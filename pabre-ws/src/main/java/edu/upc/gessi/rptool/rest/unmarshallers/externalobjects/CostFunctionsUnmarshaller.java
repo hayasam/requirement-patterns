@@ -20,7 +20,7 @@ public class CostFunctionsUnmarshaller {
 
     }
 
-    public Set<CostFunction> build() throws SemanticallyIncorrectException {
+    public Set<CostFunction> build() {
 	Set<CostFunction> ret = new HashSet<>();
 	if (setFunctions != null) {
 	    for (CostFunctionUnmarshaller aux : setFunctions) {

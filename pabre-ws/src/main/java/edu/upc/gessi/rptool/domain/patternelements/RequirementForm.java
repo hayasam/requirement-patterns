@@ -1,5 +1,6 @@
 package edu.upc.gessi.rptool.domain.patternelements;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -19,7 +20,7 @@ import edu.upc.gessi.rptool.exceptions.IntegrityException;
 
 @Entity
 @Table(name = "REQUIREMENT_FORM")
-public class RequirementForm extends PatternElement implements Comparable<RequirementForm> {
+public class RequirementForm extends PatternElement implements Comparable<RequirementForm>, Serializable {
 
     /*
      * ATTRIBUTES

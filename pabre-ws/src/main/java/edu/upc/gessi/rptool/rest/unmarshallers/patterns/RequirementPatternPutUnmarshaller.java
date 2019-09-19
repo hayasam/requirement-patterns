@@ -17,7 +17,7 @@ public class RequirementPatternPutUnmarshaller extends RequirementPatternUnmarsh
 	    @JsonProperty(value = "description", required = false) String description,
 	    @JsonProperty(value = "comments", required = false) String comments,
 	    @JsonProperty(value = "sources", required = false) Set<Long> sources,
-	    @JsonProperty(value = "editable", required = false) Boolean editable) throws IOException {
+	    @JsonProperty(value = "editable", required = false) Boolean editable) {
 	super(name, description, comments, sources, null, editable);
 	this.editableAux = editable;
     }

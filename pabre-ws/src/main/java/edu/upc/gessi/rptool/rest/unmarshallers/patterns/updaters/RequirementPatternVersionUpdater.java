@@ -21,7 +21,7 @@ public class RequirementPatternVersionUpdater {
 	this.unmarshaller = unmarshaller;
     }
 
-    public void update() throws Exception {
+    public void update() throws UIMAException, IntegrityException, SemanticallyIncorrectException {
 	build();
 	updateFileds();
 	save();

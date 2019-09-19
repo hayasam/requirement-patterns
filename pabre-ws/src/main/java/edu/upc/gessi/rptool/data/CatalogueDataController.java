@@ -80,7 +80,7 @@ public final class CatalogueDataController {
      */
     public static ImportDTO importCatalogue(ImportUnmarshaller iu)
 	    throws SemanticallyIncorrectException, MissingCreatorPropertyException, IntegrityException, ValueException,
-	    RedundancyException, JsonParseException, IOException, UIMAException {
+	    RedundancyException, IOException, UIMAException {
 
 	iu.buildAndSaveSources();
 	saveSources(iu.getSourcesOBJ());

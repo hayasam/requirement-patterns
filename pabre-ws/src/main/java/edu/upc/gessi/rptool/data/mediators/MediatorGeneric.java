@@ -2,6 +2,7 @@ package edu.upc.gessi.rptool.data.mediators;
 
 import java.util.List;
 
+import edu.upc.gessi.rptool.config.Control;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -270,15 +271,16 @@ public abstract class MediatorGeneric {
 	try {
 	    session.save(obj);
 	    session.flush();
-	} catch (HibernateException e) {
-	    if (!(e instanceof TransientObjectException)) { // Avoid throwing Transient object exception to the user
+	} catch (TransientObjectException et) {
+        // Avoid throwing Transient object exception to the user
+        Control.getInstance().showErrorMessage(et.getMessage());
+    } catch (HibernateException e) {
 		if (e.getMessage().contains(IdGenerator.IDEXCEPTIONSTRING)) {// Rollback when is ID generation fail
 		    MediatorConnection.checkSessionAndRollback(e, session);
 		}
 		throw e;
 	    }
 	}
-    }
 
     /**
      * {@inheritDoc Session#saveOrUpdate(Object)}

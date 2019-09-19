@@ -20,7 +20,7 @@ public class PutSetMetricUnmarshaller extends SetMetricUnmarshaller {
     }
 
     @Override
-    protected void setMetricName() throws IntegrityException {
+    protected void setMetricName() {
 	metric.setName(name);
     }
 

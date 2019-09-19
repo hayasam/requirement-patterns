@@ -180,6 +180,7 @@ public class RequirementPatternVersionDTO extends RequirementPatternVersionReduc
 	this.requirementPatternId = requirementPatternId;
     }
 
+    @Override
     public int compareTo(RequirementPatternVersionReducedDTO arg0) {
         RequirementPatternVersionDTO aux = (RequirementPatternVersionDTO) arg0;
 	return this.versionDate.compareTo(aux.getVersionDate());

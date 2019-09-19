@@ -27,9 +27,6 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">false</property>
 
-		<!-- Drop and re-create the database schema on startup -->
-		<!-- <property name="hbm2ddl.auto">create</property> -->
-
 		<mapping resource="config/Mapping.hbm.xml" />
 		<mapping resource="config/MappingGenericObject.hbm.xml" />
 	</session-factory>

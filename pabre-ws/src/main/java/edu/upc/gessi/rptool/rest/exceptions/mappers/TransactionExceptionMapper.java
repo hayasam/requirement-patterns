@@ -9,7 +9,7 @@ import org.hibernate.TransactionException;
 @Provider
 public class TransactionExceptionMapper extends GenericUnsuccessfullExceptionMapper<TransactionException> {
     private static final Logger logger = Logger.getLogger(TransactionExceptionMapper.class.getName());
-    private final String plainText = "text/plain";
+    private static final String plainText = "text/plain";
 
     @Override
     protected Response manageException(TransactionException exception) {

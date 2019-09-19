@@ -1,6 +1,7 @@
 package edu.upc.gessi.rptool.rest.unmarshallers.metrics;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -18,10 +19,9 @@ public class PutDomainMetricUnmarshaller extends DomainMetricUnmarshaller {
 	    @JsonProperty(value = "description", required = false) String description,
 	    @JsonProperty(value = "comments", required = false) String comments,
 	    @JsonProperty(value = "defaultValue", required = false) String defaultValueString,
-	    @JsonProperty(value = "possibleValues", required = false) ArrayList<String> possibleValues,
+	    @JsonProperty(value = "possibleValues", required = false) List<String> possibleValues,
 	    @JsonProperty(value = "sources", required = false) Set<Long> sources,
-	    @JsonProperty(value = "sourcesByIdentifier", required = false) Set<String> sourcesByIdentifier)
-	    throws SemanticallyIncorrectException {
+	    @JsonProperty(value = "sourcesByIdentifier", required = false) Set<String> sourcesByIdentifier) {
 
 	super(name, description, comments, defaultValueString, possibleValues, sources, sourcesByIdentifier);
 
@@ -47,7 +47,7 @@ public class PutDomainMetricUnmarshaller extends DomainMetricUnmarshaller {
     }
 
     @Override
-    protected void setMetricName() throws IntegrityException {
+    protected void setMetricName() {
 	metric.setName(name);
     }
 }

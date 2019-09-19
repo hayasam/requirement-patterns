@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
-
-import edu.upc.gessi.rptool.domain.schema.Classifier;
-import edu.upc.gessi.rptool.rest.dtos.ClassifierDTOInterface;
-import edu.upc.gessi.rptool.rest.dtos.patternelements.RequirementPatternDTO;
-import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
 
 public class Util {
+
+    private Util() {
+        //utility class
+    }
 
     /**
      * Convert a Collection to a list

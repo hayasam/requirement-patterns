@@ -27,9 +27,6 @@
 		<property name="show_sql">false</property>
 		<property name="format_sql">true</property> <!-- Show SQL formatted -->
 
-		<!-- Drop and re-create the database schema on startup -->
-		<!-- <property name="hbm2ddl.auto">update</property> -->
-
 		<mapping resource="config/Mapping.hbm.xml" />
 		<mapping resource="config/MappingGenericObject.hbm.xml" />
 	</session-factory>

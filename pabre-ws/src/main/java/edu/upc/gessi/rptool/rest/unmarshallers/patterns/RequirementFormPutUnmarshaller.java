@@ -7,8 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
-
 public class RequirementFormPutUnmarshaller extends RequirementFormUnmarshaller {
 
     private static int toInt(Integer i) {

@@ -1,5 +1,6 @@
 package edu.upc.gessi.rptool.domain.patternelements;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +22,7 @@ import edu.upc.gessi.rptool.exceptions.RedundancyException;
 
 @Entity
 @Table(name = "REQUIREMENT_PATTERN")
-public class RequirementPattern extends PatternElement implements Comparable<RequirementPattern> {
+public class RequirementPattern extends PatternElement implements Comparable<RequirementPattern>, Serializable {
 
     /*
      * ATTRIBUTES

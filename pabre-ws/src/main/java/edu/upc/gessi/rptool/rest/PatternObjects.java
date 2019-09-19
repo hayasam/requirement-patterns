@@ -208,7 +208,6 @@ public class PatternObjects {
      * @param idDependency
      *            Dependency id
      * @return HTTP response
-     * @throws Exception
      */
     @DELETE
     @Path("{id}/dependencies/{idDependency}")
@@ -219,8 +218,7 @@ public class PatternObjects {
 	    @ApiResponse(code = 404, message = "Not Found: The requested element is not found.", response = String.class),
 	    @ApiResponse(code = 500, message = "Internal Server Error. For more information see ‘message’ in the Response Body.", response = String.class) })
     public Response deleteDependency(@ApiParam(value = "Element ID", required = true) @PathParam("id") long id,
-	    @ApiParam(value = "Dependency ID", required = true) @PathParam("idDependency") long idDependency)
-	    throws Exception {
+	    @ApiParam(value = "Dependency ID", required = true) @PathParam("idDependency") long idDependency) {
 	ObjectDataController.removeDependency(id, idDependency);// call the controller to delete the dependency
 	return Response.status(Status.OK).build();
     }

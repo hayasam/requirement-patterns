@@ -258,7 +258,7 @@ public final class SchemaDataController extends GenericDataController {
     }
 
     public static void deleteReferencedPatternOfTheSchema(ClassificationSchema cs)
-	    throws HibernateException, IntegrityException, SemanticallyIncorrectException {
+	    throws HibernateException, SemanticallyIncorrectException {
 	MediatorSchemas.deleteReferencedPatternOfTheSchema(cs);
     }
 

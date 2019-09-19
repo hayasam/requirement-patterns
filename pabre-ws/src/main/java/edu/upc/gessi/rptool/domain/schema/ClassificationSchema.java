@@ -11,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
 import org.apache.log4j.Logger;
 
 import edu.upc.gessi.rptool.exceptions.IntegrityException;
@@ -129,7 +130,7 @@ public class ClassificationSchema extends ClassificationObject {
      *         than original
      * @throws Exception
      */
-    public ClassificationSchema copy() throws Exception {
+    public ClassificationSchema copy() throws SemanticallyIncorrectException, IntegrityException {
 	ClassificationSchema newClassifSchema = new ClassificationSchema();
 
 	try {

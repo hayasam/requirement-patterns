@@ -8,9 +8,11 @@ import javax.persistence.Table;
 
 import edu.upc.gessi.rptool.domain.Identificable;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "KEYWORD")
-public class Keyword implements Comparable<Keyword>, Identificable {
+public class Keyword implements Comparable<Keyword>, Identificable, Serializable {
 
     /*
      * ATTRIBUTES

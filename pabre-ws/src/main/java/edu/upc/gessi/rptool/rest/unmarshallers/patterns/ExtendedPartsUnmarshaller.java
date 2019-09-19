@@ -18,7 +18,7 @@ public class ExtendedPartsUnmarshaller {
 	this.parts = parts;
     }
 
-    public Set<ExtendedPart> build() throws SemanticallyIncorrectException, IntegrityException {
+    public Set<ExtendedPart> build() throws SemanticallyIncorrectException {
 	Set<ExtendedPart> ret = new HashSet<>();
 	if (parts != null) {
 	    for (ExtendedPartUnmarshaller aux : parts) {

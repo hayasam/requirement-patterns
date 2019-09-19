@@ -1,6 +1,5 @@
 package edu.upc.gessi.rptool.rest.unmarshallers.patterns;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -13,7 +12,6 @@ import org.hibernate.HibernateException;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonParseException;
 
 import edu.upc.gessi.rptool.data.GenericDataController;
 import edu.upc.gessi.rptool.data.MetricDataController;

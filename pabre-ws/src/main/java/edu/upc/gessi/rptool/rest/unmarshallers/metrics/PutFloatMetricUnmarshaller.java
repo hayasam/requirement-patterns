@@ -27,14 +27,14 @@ public class PutFloatMetricUnmarshaller extends FloatMetricUnmarshaller {
     }
 
     @Override
-    protected void setMinMaxDefaultValues() throws ValueException {
+    protected void setMinMaxDefaultValues() {
 	((FloatMetric) metric).setMinNoCheck(minValue);
 	((FloatMetric) metric).setMaxNoCheck(maxValue);
 	((FloatMetric) metric).setDefaultValueNoCheck(defaultValue);
     }
 
     @Override
-    protected void setMetricName() throws IntegrityException {
+    protected void setMetricName() {
 	metric.setName(name);
     }
 

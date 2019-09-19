@@ -8,6 +8,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
+import edu.upc.gessi.rptool.exceptions.IntegrityException;
 import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
 import org.apache.log4j.Logger;
 
@@ -95,7 +96,7 @@ public class PatternsParts {
 	    @ApiParam(value = "Unmarshaller with new extended parts", required = true) ExtendedPartsUnmarshaller replaceExtendedUnmarshaller,
 	    @ApiParam(value = "Pattern ID", required = true) @PathParam("patternId") long patternId,
 	    @ApiParam(value = "Version ID", required = true) @PathParam("versionId") long versionId,
-	    @ApiParam(value = "Form ID", required = true) @PathParam("formId") long formId) throws Exception {
+	    @ApiParam(value = "Form ID", required = true) @PathParam("formId") long formId) throws SemanticallyIncorrectException, IntegrityException {
 	RequirementForm rf = Patterns.getFormAndCheckExceptions(versionId, patternId, formId); // get the form
 	// Build the unmarshaller
 	Set<ExtendedPart> extendedParts = replaceExtendedUnmarshaller.build();

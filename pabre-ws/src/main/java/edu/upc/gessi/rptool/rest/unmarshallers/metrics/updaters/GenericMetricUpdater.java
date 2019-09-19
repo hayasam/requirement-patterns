@@ -18,7 +18,7 @@ public abstract class GenericMetricUpdater {
 	this.metricJson = metricJson;
     }
 
-    private void updateCommonMetricFields() throws IntegrityException {
+    private void updateCommonMetricFields() {
 	if (aux.getName() != null)
 	    m.setName(aux.getName());
 	if (aux.getDescription() != null)
@@ -31,7 +31,7 @@ public abstract class GenericMetricUpdater {
 
     protected abstract void unmarshall() throws IOException, IntegrityException, ValueException, SemanticallyIncorrectException;
 
-    public void update() throws Exception {
+    public void update() throws ValueException, SemanticallyIncorrectException, IntegrityException, IOException {
 	unmarshall();
 	updateCommonMetricFields();
 	updateParticularMetricFields();

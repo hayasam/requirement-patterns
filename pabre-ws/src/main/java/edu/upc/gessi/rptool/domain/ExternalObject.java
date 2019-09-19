@@ -12,10 +12,12 @@ import javax.persistence.Table;
 
 import edu.upc.gessi.rptool.domain.patternelements.RequirementPatternVersion;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "EXTERNAL_OBJECT")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class ExternalObject implements Identificable {
+public abstract class ExternalObject implements Identificable, Serializable {
 
     @Id
     @Column(name = "ID")
@@ -68,8 +70,7 @@ public abstract class ExternalObject implements Identificable {
 	if (getClass() != obj.getClass())
 	    return false;
 	ExternalObject other = (ExternalObject) obj;
-	if (id != other.id) return false;
-	return true;
+        return id == other.id;
     }
 
     @Override

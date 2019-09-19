@@ -239,6 +239,7 @@ public final class MediatorPatterns extends MediatorGeneric {
     }
 
     /**
+	 * @deprecated ()
      * Loads from database the RequirementPattern id associated with the
      * RequirementForm whose id is received as parameter.
      * 

@@ -2,9 +2,7 @@ package edu.upc.gessi.rptool.rest.utilities;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Deserializer {

@@ -67,7 +67,7 @@ public abstract class UnmarshallerGenericMetric {
 	return metric;
     }
 
-    protected void setMetricName() throws IntegrityException {
+    protected void setMetricName() {
 	metric.setName(name);
     }
 

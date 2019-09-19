@@ -13,7 +13,7 @@ public class SchemaSubstitutionUmarshaller extends SchemaUnmarshaller {
     @JsonCreator
     public SchemaSubstitutionUmarshaller(
 	    @JsonProperty(required = true) Set<ClassifierUnmarshaller> rootClassifiersIds)
-	    throws IntegrityException, IOException {
+	    throws IntegrityException {
 	super(0, null, null, null, null, rootClassifiersIds);
     }
 

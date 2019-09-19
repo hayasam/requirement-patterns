@@ -15,6 +15,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
 import org.apache.log4j.Logger;
 import org.apache.uima.UIMAException;
 
@@ -102,7 +103,7 @@ public class PatternsForms {
 	    @ApiParam(value = "Unmarshaller with the form field to create/replace", required = true) RequirementFormsUnmarshaller formCreationUnmarshaller,
 	    @ApiParam(value = "ID of the pattern", required = true) @PathParam("patternId") long patternId,
 	    @ApiParam(value = "ID of the version", required = true) @PathParam("versionId") long versionId)
-	    throws Exception {
+	    throws IntegrityException, UIMAException, SemanticallyIncorrectException {
 	logger.debug("Subtitiong form");
 	RequirementPatternVersion rpv = Patterns.retrieveRequirementPatternVersion(versionId, patternId);
 	Set<RequirementForm> forms = formCreationUnmarshaller.build();

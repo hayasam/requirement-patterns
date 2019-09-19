@@ -1,6 +1,5 @@
 package edu.upc.gessi.rptool.rest.unmarshallers.classifications;
 
-import java.io.IOException;
 import java.util.Collection;
 import java.util.Set;
 

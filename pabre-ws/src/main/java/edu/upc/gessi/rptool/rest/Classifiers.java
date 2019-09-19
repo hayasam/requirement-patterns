@@ -201,7 +201,7 @@ public class Classifiers {
 	Classifier old = retrieveInternalClassifier(internalId);
 	try {
 	    boolean isRoot = old.getType() == Classifier.ROOT;
-	    Classifier newInternal = (Classifier) unm.build(isRoot); // Build the new InternalClassifier
+	    Classifier newInternal = unm.build(isRoot); // Build the new InternalClassifier
 	    // Update Classifier with the given patterns
 	    SchemaDataController.updateInternalClassifier(old, newInternal);
 	} catch (Exception e) {

@@ -1,6 +1,4 @@
 package edu.upc.gessi.rptool.rest;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -219,7 +217,7 @@ public class Patterns {
     public Response updatePattern(
 	    // Using import unmarshaller to reuse the code
 	    @ApiParam(value = "Unmarshaller with the new pattern fields", required = true) RequirementPatternImportUnmarshaller unmarshaller,
-	    @ApiParam(value = "ID of the pattern", required = true) @PathParam("id") long patternId) throws SemanticallyIncorrectException, NotFoundException, IntegrityException, UIMAException {
+	    @ApiParam(value = "ID of the pattern", required = true) @PathParam("id") long patternId) throws SemanticallyIncorrectException, IntegrityException, UIMAException {
 	logger.info("Updating pattern");
 	RequirementPattern rp = retrieveRequirementPattern(patternId); // obtain the requirement pattern
 	PatternDataController.deletePattern(rp);// Delete older pattern

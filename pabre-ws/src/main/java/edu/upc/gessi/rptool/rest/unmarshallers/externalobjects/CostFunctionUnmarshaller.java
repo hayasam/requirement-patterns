@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import edu.upc.gessi.rptool.domain.CostFunction;
-import edu.upc.gessi.rptool.rest.exceptions.SemanticallyIncorrectException;
 
 public class CostFunctionUnmarshaller {
 

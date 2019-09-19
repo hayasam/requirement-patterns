@@ -148,8 +148,7 @@ public class Sources {
 	    @ApiResponse(code = 404, message = "Not Found: The requested source is not found.", response = String.class),
 	    @ApiResponse(code = 500, message = "Internal Server Error. For more information see ‘message’ in the Response Body.", response = String.class) })
     public Response deleteMetric(
-	    @ApiParam(value = "ID of the source to be deleted", required = true) @PathParam("id") long id)
-	    throws Exception {
+	    @ApiParam(value = "ID of the source to be deleted", required = true) @PathParam("id") long id) {
 	logger.debug("Delete source with ID: " + id);
 	Source s = retrieveSource(id);
 	ObjectDataController.delete(s);

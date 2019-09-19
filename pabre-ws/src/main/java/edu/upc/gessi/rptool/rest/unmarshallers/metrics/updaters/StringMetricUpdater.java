@@ -2,9 +2,6 @@ package edu.upc.gessi.rptool.rest.unmarshallers.metrics.updaters;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-
 import edu.upc.gessi.rptool.domain.metrics.Metric;
 import edu.upc.gessi.rptool.domain.metrics.StringMetric;
 import edu.upc.gessi.rptool.exceptions.IntegrityException;

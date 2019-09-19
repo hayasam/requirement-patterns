@@ -121,4 +121,11 @@ public abstract class PatternObject implements Identificable {
 		return id == other.id;
 	}
 
+	@Override
+	public int hashCode() {
+		int result = 17;
+		result = 31 * result + Long.valueOf(id).hashCode();
+		return result;
+	}
+
 }

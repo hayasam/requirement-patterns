@@ -11,15 +11,14 @@ public class IntegrityException extends RPToolException {
      */
 
     private static final long serialVersionUID = 1L;
-    private String message = null;
+    private final String message;
 
     /*
      * CREATORS
      */
 
     public IntegrityException(String msg) {
-	message = "";
-	message = msg;
+	    this.message = msg;
     }
 
     /*
@@ -28,10 +27,6 @@ public class IntegrityException extends RPToolException {
 
     public String getMsg() {
 	return message;
-    }
-
-    public void setMsg(String message) {
-	this.message = message;
     }
 
     @Override

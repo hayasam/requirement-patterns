@@ -21,13 +21,13 @@ public class PutStringMetricUnmarshaller extends StringMetricUnmarshaller {
     }
 
     @Override
-    protected void setDefaultValue() throws ValueException {
+    protected void setDefaultValue() {
 
 	((StringMetric) metric).setDefaultValueNoCheck(defaultValue);
     }
 
     @Override
-    protected void setMetricName() throws IntegrityException {
+    protected void setMetricName() {
 	metric.setName(name);
     }
 }
