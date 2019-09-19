@@ -36,62 +36,27 @@ public class SourceDTO {
 	}
     }
 
-    public SourceDTO(long id, String identifier, String reference, String type, String comments) {
-	super();
-	this.id = id;
-	this.identifier = identifier;
-	this.reference = reference;
-	this.type = type;
-	this.comments = comments;
-    }
-
     public URI getUri() {
         return uri;
-    }
-
-    public void setUri(URI uri) {
-        this.uri = uri;
     }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getIdentifier() {
         return identifier;
-    }
-
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
     }
 
     public String getReference() {
         return reference;
     }
-
-    public void setReference(String reference) {
-        this.reference = reference;
-    }
-
     public String getType() {
         return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getComments() {
         return comments;
     }
-
-    public void setComments(String comments) {
-        this.comments = comments;
-    }
-
 
 }

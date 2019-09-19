@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import edu.upc.gessi.rptool.config.Control;
 import org.apache.log4j.Logger;
 import org.hibernate.FlushMode;
 import org.hibernate.HibernateException;
@@ -222,7 +223,7 @@ public class MediatorConnection {
 	    tempFilePath = absolutePath.substring(0, absolutePath.lastIndexOf(File.separator));
 	    Files.delete(Paths.get(absolutePath));// Delete temporary file
 	} catch (IOException e) {
-	    e.printStackTrace();
+		Control.getInstance().showErrorMessage(e.getMessage());
 	}
 	return new File(tempFilePath);
     }

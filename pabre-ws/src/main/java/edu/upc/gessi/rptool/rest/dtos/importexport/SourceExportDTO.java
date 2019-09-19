@@ -23,52 +23,24 @@ public class SourceExportDTO {
 	this.comments = (s.getComments() != null) ? s.getComments() : "";
     }
 
-    public SourceExportDTO(String identifier, String reference, String type, String comments) {
-	super();
-	this.identifier = identifier;
-	this.reference = reference;
-	this.type = type;
-	this.comments = comments;
-    }
-
     public long getId() {
 	return id;
-    }
-
-    public void setId(long id) {
-	this.id = id;
     }
 
     public String getIdentifier() {
 	return identifier;
     }
 
-    public void setIdentifier(String identifier) {
-	this.identifier = identifier;
-    }
-
-    public String getReference() {
-	return reference;
-    }
-
-    public void setReference(String reference) {
-	this.reference = reference;
-    }
-
     public String getType() {
 	return type;
     }
 
-    public void setType(String type) {
-	this.type = type;
+    public String getReference() {
+        return reference;
     }
 
     public String getComments() {
 	return comments;
-    }
-
-    public void setComments(String comments) {
-	this.comments = comments;
     }
 
 }
