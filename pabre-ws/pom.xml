@@ -60,9 +60,9 @@
 			<properties>
 				<db.name>Derby Embedded</db.name>
 				<db.driver_class>org.apache.derby.jdbc.EmbeddedDriver</db.driver_class>
-				<db.connectionURL></db.connectionURL>
-				<db.username></db.username>
-				<db.password></db.password>
+				<db.connectionURL/>
+				<db.username/>
+				<db.password/>
 				<db.dialect>org.hibernate.dialect.DerbyDialect</db.dialect>
 				<db.show_sql>false</db.show_sql>
 			</properties>
@@ -129,7 +129,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.6.1</version>
+			<version>1.7.36</version>
 		</dependency>
 		<!-- SWAGGER -->
 		<dependency>
