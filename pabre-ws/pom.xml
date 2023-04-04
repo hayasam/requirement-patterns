@@ -60,9 +60,9 @@
 			<properties>
 				<db.name>Derby Embedded</db.name>
 				<db.driver_class>org.apache.derby.jdbc.EmbeddedDriver</db.driver_class>
-				<db.connectionURL></db.connectionURL>
-				<db.username></db.username>
-				<db.password></db.password>
+				<db.connectionURL/>
+				<db.username/>
+				<db.password/>
 				<db.dialect>org.hibernate.dialect.DerbyDialect</db.dialect>
 				<db.show_sql>false</db.show_sql>
 			</properties>
@@ -162,7 +162,7 @@
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
-			<version>0.9.2.1</version>
+			<version>0.9.5.5</version>
 		</dependency>
 		<!-- DERBY -->
 		<dependency>
