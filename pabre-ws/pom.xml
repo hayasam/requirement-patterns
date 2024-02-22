@@ -60,9 +60,9 @@
 			<properties>
 				<db.name>Derby Embedded</db.name>
 				<db.driver_class>org.apache.derby.jdbc.EmbeddedDriver</db.driver_class>
-				<db.connectionURL></db.connectionURL>
-				<db.username></db.username>
-				<db.password></db.password>
+				<db.connectionURL/>
+				<db.username/>
+				<db.password/>
 				<db.dialect>org.hibernate.dialect.DerbyDialect</db.dialect>
 				<db.show_sql>false</db.show_sql>
 			</properties>
@@ -185,7 +185,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>42.1.4</version>
+			<version>42.7.2</version>
 		</dependency>
 		<!-- UIMA -->
 		<dependency>
