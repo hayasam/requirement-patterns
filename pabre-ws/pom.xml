@@ -60,9 +60,9 @@
 			<properties>
 				<db.name>Derby Embedded</db.name>
 				<db.driver_class>org.apache.derby.jdbc.EmbeddedDriver</db.driver_class>
-				<db.connectionURL></db.connectionURL>
-				<db.username></db.username>
-				<db.password></db.password>
+				<db.connectionURL/>
+				<db.username/>
+				<db.password/>
 				<db.dialect>org.hibernate.dialect.DerbyDialect</db.dialect>
 				<db.show_sql>false</db.show_sql>
 			</properties>
@@ -135,7 +135,7 @@
 		<dependency>
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-jersey2-jaxrs</artifactId>
-			<version>1.5.0</version>
+			<version>1.5.11</version>
 		</dependency>
 		<!-- HIBERNATE -->
 		<dependency>
